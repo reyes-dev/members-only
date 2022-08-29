@@ -1,0 +1,25 @@
+h2 {
+  align-self: center;
+  justify-self: center;
+}
+
+input[type='submit'] {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 12px 24px;
+  border: 0;
+  color: #14213d;
+  background: #e5e5e5;
+  line-height: 1.15;
+  font-size: 16px;
+}
+
+.registrations_new > .container {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: .7fr 1fr;
+  color: #e5e5e5;
+}

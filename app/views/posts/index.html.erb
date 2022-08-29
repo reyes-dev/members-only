@@ -1,19 +1,22 @@
-<%= link_to 'New Post', new_post_path(@post) %>
-
-<h1>Posts</h1>
-
-<ul>
-  <% @posts.each do |post| %>
-    <li>
-      <% if user_signed_in? %>
-        <%= post.title %>
-        <%= post.body %>
-        <%= 'Author: ' + post.user.name %>
-      <% else %>
-        <%= post.title %>
-        <%= post.body %>
-        <%= 'Author: Anonymous' %>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+<div class="post_index">
+  <div class="container">
+    <h1>Posts</h1>
+        <ul>
+        <div class="posts">
+        <% @posts.each do |post| %>
+          <li>
+            <% if user_signed_in? %>
+              <p><%= post.title %></p> <br>
+              <p><%= post.body %></p> 
+              <p class='bottom_para'><%= 'Created by: ' + post.user.name %></p>
+            <% else %>
+              <p><%= post.title %></p> <br>
+              <p><%= post.body %></p> 
+              <p class='bottom_para' ><%= 'Created by: Anonymous' %></p>
+            <% end %>
+          </li>
+        <% end %>
+        </div>
+      </ul>
+  </div>
+</div>

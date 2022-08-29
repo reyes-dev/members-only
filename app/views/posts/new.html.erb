@@ -1,7 +1,22 @@
-<%= form_with model: @post do |form| %>
-  <%= form.label :title, 'Title: ' %>
+<div class="post_new">
+  <div class="container">
+  <div class="form">
+      <%= form_with model: @post do |form| %>
+  <div class="1">
+    <%= form.label :title, 'Title: ' %>  
     <%= form.text_field :title %>
-  <%= form.label :body, 'Body: ' %>
-    <%= form.text_area :body %>
-  <%= form.submit 'Post' %>
+  </div>
+
+  <div class="2">
+    <%= form.label :body, 'Body: ' %>
+    <%= form.text_area :body, size: "30x10" %>
+  </div>
+
+  <div class="3">
+    <%= form.submit 'Post' %>
+    <%= link_to 'Back', posts_path %>
+  </div>
 <% end %>
+    </div>
+  </div>
+</div>

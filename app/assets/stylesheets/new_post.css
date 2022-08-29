@@ -1,0 +1,38 @@
+h2 {
+  align-self: center;
+  justify-self: center;
+}
+
+input[type='submit'] {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 12px 24px;
+  border: 0;
+  color: #14213d;
+  background: #e5e5e5;
+  line-height: 1.15;
+  font-size: 16px;
+}
+
+.post_new > .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: #e5e5e5;
+}
+
+.post_new > .container > .form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: .2fr 1fr 1fr;
+}
+
+.form {
+  grid-column: 2 / 3;
+}
+
+form {
+  grid-row: 2 / 3;
+}

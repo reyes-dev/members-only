@@ -7,25 +7,34 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'post' %>
+    <%= stylesheet_link_tag 'login' %>
+    <%= stylesheet_link_tag 'register' %>
+    <%= stylesheet_link_tag 'edit_account' %>
+    <%= stylesheet_link_tag 'new_post' %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
+    <div class="header">
+      <% if current_user %>
+        <%= link_to 'Edit Account', edit_user_registration_path %>
+        <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete } %>
+        <%= link_to 'New Post', new_post_path(@post) %>
+      <% else %>
+        <%= link_to_unless_current "Log in", new_user_session_path %>
+        <%= link_to_unless_current "Register", new_user_registration_path %>
+      <% end %>
+    </div>
 
-    <% if current_user %>
-      <%= link_to current_user.email, edit_user_registration_path %>
-      <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete } %>
-    <% else %>
-      <%= link_to_unless_current "Log in", new_user_session_path %>
-      <%= link_to_unless_current "Register", new_user_registration_path %>
-    <% end %>
-
+    <div class="alert">
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

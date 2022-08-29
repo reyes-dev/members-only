@@ -5,9 +5,15 @@
 <ul>
   <% @posts.each do |post| %>
     <li>
-      <%= post.title %>
-      <%= post.body %>
-      <%= post.user.email %>
+      <% if user_signed_in? %>
+        <%= post.title %>
+        <%= post.body %>
+        <%= 'Author: ' + post.user.name %>
+      <% else %>
+        <%= post.title %>
+        <%= post.body %>
+        <%= 'Author: Anonymous' %>
+      <% end %>
     </li>
   <% end %>
 </ul>

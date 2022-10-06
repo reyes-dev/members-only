@@ -140,3 +140,10 @@ a {
   grid-row-start: 2;
   justify-self: center;
 }
+.footer {
+  grid-row-start: 8;
+  grid-column-start: 2;
+  grid-column-end: -1;
+  font-size: .5em;
+  margin-left: 30rem;
+}

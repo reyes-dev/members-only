@@ -13,32 +13,3 @@
  *= require_tree .
  *= require_self
  */
- @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: #14213d;
-  font-family: 'Philosopher', sans-serif;
-}
-
-.header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  height: 10vh;
-  align-items: center;
-  justify-items:end;
-  background-color: #fca311;
-}
-
-a {
-  text-decoration: none;
-  color: #e5e5e5;
-}
-
-.alert > p {
-  color: #e5e5e5;
-}

@@ -1,22 +1,22 @@
-<div class="post_new">
-  <div class="container">
-  <div class="form">
-      <%= form_with model: @post do |form| %>
-  <div class="1">
-    <%= form.label :title, 'Title: ' %>  
-    <%= form.text_field :title %>
-  </div>
+<div class="post_container">
+  <div class="post_form">
+    <div class="form">
+        <%= form_with model: @post do |form| %>
+    <div class="1">
+      <%= form.label :title, 'Title: ' %>  
+      <%= form.text_field :title %>
+    </div>
 
-  <div class="2">
-    <%= form.label :body, 'Body: ' %>
-    <%= form.text_area :body, size: "30x10" %>
-  </div>
+    <div class="2">
+      <%= form.label :body, 'Body: ' %>
+      <%= form.text_area :body, size: "30x10" %>
+    </div>
 
-  <div class="3">
-    <%= form.submit 'Post' %>
-    <%= link_to 'Back', posts_path %>
-  </div>
-<% end %>
+    <div class="3">
+      <%= form.submit 'Post' %>
+      <%= link_to 'Back', posts_path %>
+    </div>
+  <% end %>
     </div>
   </div>
 </div>

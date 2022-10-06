@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #bde0fe;
+  font-family: 'Philosopher', sans-serif;
+}
+p {
+  color: #3a86ff;
+}
+.header {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  height: 10vh;
+  gap: 8px;
+  align-items: center;
+  justify-items:end;
+  background-color: #a2d2ff;
+}
+.container {
+  display: grid;
+  height: 90vh;
+  grid-template-columns: .2fr 1fr .2fr;
+  grid-template-rows: repeat(8, 1fr);
+}
+.posts {
+  display: flex;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  justify-content: center;
+}
+.posts ul {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.posts li {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #bbd0ff;
+  box-shadow: 3px 3px #c8b6ff;
+  height: 200px;
+  width: 250px;
+}
+.para_title {
+  grid-row-start: 1;
+}
+.para_body {
+  grid-row-start: 2;
+}
+.para_name {
+  grid-row-start: -1;
+}
+.login_link {
+  grid-column-start: 13;
+}
+.register_link {
+  grid-column-start: 14;
+}
+a {
+  text-decoration: none;
+  color: #3a86ff;
+}
+
+.alert > p {
+  color: #3a86ff;
+}
+.members_img {
+  grid-column-start: 8;
+  width: 300px;
+  height: auto;
+}
+.only_img {
+  grid-column-start: 9;
+  width: 100px;
+  height: auto;
+}
+.login_container {
+  display: grid;
+  height: 90vh;
+  grid-template-columns: .2fr 1fr .2fr;
+  grid-template-rows: repeat(8, 1fr);
+}
+.login_form {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-self: center;
+}
+.registrations_container {
+  display: grid;
+  height: 90vh;
+  grid-template-columns: .2fr 1fr .2fr;
+  grid-template-rows: repeat(8, 1fr);
+}
+.registrations_form {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-self: center;
+}
+.forgot_password_container {
+  display: grid;
+  height: 90vh;
+  grid-template-columns: .2fr 1fr .2fr;
+  grid-template-rows: repeat(8, 1fr);
+}
+.forgot_password_form {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-self: center;
+}
+.edit_account {
+  grid-column-start: 12;
+}
+.edit_user_container {
+  display: grid;
+  height: 90vh;
+  grid-template-columns: .2fr 1fr .2fr;
+  grid-template-rows: repeat(8, 1fr);
+}
+.edit_user_form {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-self: center;
+}
+.post_container {
+  display: grid;
+  height: 90vh;
+  grid-template-columns: .2fr 1fr .2fr;
+  grid-template-rows: repeat(8, 1fr);
+}
+.post_form {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-self: center;
+}

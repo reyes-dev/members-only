@@ -1,22 +1,19 @@
-<div class="post_index">
   <div class="container">
-    <h1>Posts</h1>
-        <ul>
-        <div class="posts">
+    <div class="posts">
+      <ul>
         <% @posts.each do |post| %>
           <li>
             <% if user_signed_in? %>
-              <p><%= post.title %></p> <br>
-              <p><%= post.body %></p> 
-              <p class='bottom_para'><%= 'Created by: ' + post.user.name %></p>
+              <p class="para_title"><%= post.title %></p>
+              <p class="para_body"><%= post.body %></p> 
+              <p class='para_name'><%= 'Created by: ' + post.user.name %></p>
             <% else %>
-              <p><%= post.title %></p> <br>
-              <p><%= post.body %></p> 
-              <p class='bottom_para' ><%= 'Created by: Anonymous' %></p>
+              <p class="para_title"><%= post.title %></p>
+              <p class="para_body"><%= post.body %></p> 
+              <p class="para_name"><%= 'Created by: Anonymous' %></p>
             <% end %>
           </li>
         <% end %>
-        </div>
       </ul>
+    </div>
   </div>
-</div>
